@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter</title>
+    <style>
+        body{
+            background-color: beige;
+        }
+        #counter{
+            background-color:rgb(31, 28, 28);
+            width: 210px;
+            height: 210px;
+            
+            font-size: 100px;
+            color: white;
+           text-align: center;
+           border-radius: 10px;
+           font-weight: bold;
+        }
+        #increment{
+            padding: 20px;
+            background-color: gray;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        #reset{
+            
+            font-weight: bold;
+            font-size: 20px;
+            padding: 25px;
+            background-color: gray;
+            border-radius: 10px;
+        }
+        #decrement{
+            padding: 20px;
+            background-color: gray;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div style=" width: 300px; height: 300px; margin: auto; margin-top: 10%;">
+  <div id="counter">0</div>
+  <button id="increment">+</button>
+  <button id="reset">reset</button> 
+  <button id="decrement">-</button>
+</div>
+
+
+
+
+
+    <script>
+ document.getElementById('increment').onclick=function(){
+
+ var counter= document.getElementById('counter').innerHTML
+ document.getElementById('counter').innerHTML=Number(counter)+1;
+
+}
+document.getElementById('decrement').onclick=function(){
+    var counter=document.getElementById('counter').innerHTML;
+        document.getElementById('counter').innerHTML=0;
+        document.getElementById('counter').innerHTML=counter-1;
+    }
+    document.getElementById('reset').onclick=function(){
+        var counter = document.getElementById('counter').innerHTML;
+        document.getElementById('counter').innerHTML=0;
+    }
+    // document.getElementById('increment').onclick=function(){
+    //     var counter  = document.getElementById('counter').innerHTML
+    //     document.getElementById('counter').innerHTML = Number(counter)+1;
+    // }
+//     document.getElementById('decrement').onclick =function(){
+//         var counter = document.getElementById('counter').innerHTML
+//         document.getElementById('counter').innerHTML = counter-1
+//     }
+// document.getElementById('reset').onclick = function(){
+//     var counter = document.getElementById('counter').innerHTML
+//     document.getElementById('counter').innerHTML=0;
+
+
+    </script>
+</body>
+</html>
